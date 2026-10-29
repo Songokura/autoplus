@@ -183,6 +183,34 @@
 
   /* интро пропускается при переходе по якорю, хэше в адресе или если страница уже проскроллена */
   var skipIntro = !!location.hash || window.scrollY > 80;
+  /* ---------- приборная панель героя: запуск, самотест ламп, лампа масла -> плюс AUTO+ ---------- */
+  var dash = document.getElementById('dash');
+  if (dash) {
+    var dashBg = dash.parentNode;
+    var dashEnd = function () {
+      dash.classList.add('is-lit', 'is-ok', 'is-done');
+      dashBg.classList.add('is-ok');
+    };
+    if (reduceMotion || skipIntro) {
+      dashEnd();
+    } else {
+      var step = function (ms, fn) { setTimeout(fn, ms); };
+      step(300, function () { dash.classList.add('is-lit', 'is-test', 'is-run'); });
+      step(1500, function () {
+        dash.classList.remove('is-test');
+        dash.classList.add('is-warn', 'is-blink');
+        dashBg.classList.add('is-warn');
+      });
+      step(2500, function () { dash.classList.remove('is-run'); dash.classList.add('is-idle'); });
+      step(3600, function () {
+        dash.classList.remove('is-warn', 'is-blink');
+        dash.classList.add('is-ok');
+        dashBg.classList.remove('is-warn');
+        dashBg.classList.add('is-ok');
+      });
+    }
+  }
+
   var boxes = document.querySelectorAll('.hex-reveal');
   if (reduceMotion) {
     boxes.forEach(function (b) { b.classList.add('is-lit', 'is-done'); });
