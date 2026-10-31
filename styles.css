@@ -285,9 +285,9 @@ body.menu-open .burger span:last-child{top:21px;transform:rotate(-45deg)}
 .svc-pic img.rv{position:absolute;inset:0}
 .svc-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s ease}
 .svc-video.is-playing{opacity:1}
-#antifriz .svc-pic img,#antifriz .svc-video{object-position:center 42%}
-#tormoz .svc-pic img{object-position:center 35%}
-#pechka .svc-pic img,#pechka .svc-video{object-position:70% 40%}
+#antifriz .svc-pic img{object-position:center 50%}
+#tormoz .svc-pic img{object-position:center 45%}
+#pechka .svc-pic img,#pechka .svc-video{object-position:60% 40%}
 .svc-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
 .svc-body p{margin-top:10px;color:var(--muted);font-size:16px}
 .svc-facts{margin-top:18px;border-top:1px solid var(--line)}
