@@ -219,7 +219,7 @@ h1 { font-size: clamp(38px, 5.2vw, 76px); font-weight: 800; color: #fff; letter-
 .logo-track { display: flex; width: max-content; align-items: center; gap: 56px; padding: 0 28px; animation: strip 60s linear infinite; }
 .logo-track img { height: 54px; width: auto; max-width: 200px; object-fit: contain; flex: 0 0 auto; filter: grayscale(1); opacity: .72; transition: filter .3s, opacity .3s; }
 .logo-track img:hover { filter: none; opacity: 1; }
-.facts { margin-top: 56px; display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 16px; }
+.facts { margin-top: 56px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
 .facts li { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 22px 24px; }
 .facts p { font-size: 15px; line-height: 1.45; }
 
@@ -278,15 +278,18 @@ h1 { font-size: clamp(38px, 5.2vw, 76px); font-weight: 800; color: #fff; letter-
 .chem-logos { display: flex; gap: 12px; }
 .chem-logos img { height: 44px; width: auto; max-width: 150px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; }
 .chem > h3 { font-size: clamp(20px, 2vw, 26px); }
-.groups { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 28px; }
+.groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 40px 48px; margin-top: 28px; }
 .grp { min-width: 0; }
 .grp-h { font-family: var(--fm); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); padding-bottom: 12px; border-bottom: 1px solid var(--line); }
-.glogos { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 16px; }
+.glogos { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin-top: 16px; }
 .glogos li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; min-height: 72px; display: flex; align-items: center; justify-content: center; padding: 12px 10px; }
 .glogos img { max-height: 30px; max-width: 100%; width: auto; object-fit: contain; }
 .glogos img[src*="mann"] { max-height: 38px; }
+.glogos img[src*="valesco"], .glogos img[src*="mountain"] { max-height: 48px; }
+.glogos li:has(img[src*="nord"]) { background: #15181B; border-color: #15181B; }
 .wordmark { font-family: var(--fd); font-weight: 800; font-size: 20px; letter-spacing: .04em; color: var(--text); white-space: nowrap; }
-@media (min-width: 761px) and (max-width: 1100px) { .glogos li { padding: 10px 6px; } .wordmark { font-size: 15px; letter-spacing: .02em; } }
+@media (min-width: 761px) and (max-width: 1100px) { .glogos { grid-template-columns: repeat(3, minmax(0,1fr)); } .glogos li { padding: 10px 6px; } .wordmark { font-size: 15px; letter-spacing: .02em; } }
+@media (max-width: 760px) { .glogos { grid-template-columns: repeat(3, minmax(0,1fr)); } }
 .grp .chips { margin-top: 14px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .chips li { font-size: 14px; font-weight: 500; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
