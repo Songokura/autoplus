@@ -31,7 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m.webp" media="(max-width: 760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261102-4">
+<link rel="stylesheet" href="styles.css?v=20261102-5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -260,7 +260,7 @@
   <div class="wrap">
     <p class="kick" data-i18n="br.kick">Бренды</p>
     <h2 id="h-brands" data-i18n="br.h2">Бренды в наличии</h2>
-    <p class="lead" data-i18n="br.lead">Официальный дилер моторных масел Divinol, Kroon Oil, Liqui Moly, Ravenol, Mobil, S-Oil. В наличии - масла 14 мировых производителей, автохимия, присадки, антифризы и автолампы.</p>
+    <p class="lead" data-i18n="br.lead">Официальный дилер моторных масел Divinol, Kroon Oil, Liqui Moly, Ravenol, Mobil, S-Oil. В наличии - масла 14 мировых производителей, автохимия, присадки, антифризы, автолампы и фильтры.</p>
     <ul class="logos" aria-label="Бренды масел в наличии">
       <li class="rv"><img src="assets/brands/kroon-oil.webp" alt="Kroon Oil" loading="lazy" decoding="async"><span class="tag" data-i18n="br.dealer">Официальный дилер</span></li>
       <li class="rv"><img src="assets/brands/divinol.svg" alt="Divinol" loading="lazy" decoding="async"><span class="tag" data-i18n="br.dealer">Официальный дилер</span></li>
@@ -279,24 +279,40 @@
     </ul>
     <p class="note note-map"><a href="https://www.kroon-oil.com/ru/dealers/" target="_blank" rel="noopener"><span data-i18n="br.map">AUTO+ указан в официальной карте дилеров Kroon Oil</span><svg width="14" height="14"><use href="#ic-ext"/></svg></a></p>
     <div class="chem">
-      <div class="chem-head">
-        <h3 data-i18n="br.chem">Автохимия, присадки и автолампы</h3>
-        <div class="chem-logos">
-          <img src="assets/brands/lavr.svg" alt="LAVR" loading="lazy" decoding="async">
-          <img src="assets/brands/grass.svg" alt="GRASS" loading="lazy" decoding="async">
+      <h3 data-i18n="br.chem">Автохимия, автосвет и фильтры</h3>
+      <div class="groups">
+        <div class="grp">
+          <p class="grp-h" data-i18n="br.g1">Автохимия</p>
+          <ul class="glogos"><li><img src="assets/brands/lavr.svg" alt="LAVR" loading="lazy" decoding="async"></li><li><img src="assets/brands/grass.svg" alt="GRASS" loading="lazy" decoding="async"></li><li><img src="assets/brands/mitsuji.webp" alt="MITSUJI" loading="lazy" decoding="async"></li></ul>
+          <ul class="chips">
+            <li data-i18n="br.c1">Присадки для ДВС</li>
+            <li data-i18n="br.c2">Присадки для АКПП</li>
+            <li data-i18n="br.c3">Присадки для ГУР</li>
+            <li data-i18n="br.c4">Присадки для системы охлаждения</li>
+            <li data-i18n="br.c5">Антифризы</li>
+            <li data-i18n="br.c6">Тормозные жидкости</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp-h" data-i18n="br.g2">Автосвет</p>
+          <ul class="glogos"><li><img src="assets/brands/osram.svg" alt="OSRAM" loading="lazy" decoding="async"></li><li><span class="wordmark">DOMAX</span></li><li><span class="wordmark">GM</span></li></ul>
+          <ul class="chips">
+            <li data-i18n="br.c7">Автолампы галогенные</li>
+            <li data-i18n="br.c8">Автолампы светодиодные</li>
+            <li data-i18n="br.c9">Автолампы ксеноновые</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <p class="grp-h" data-i18n="br.g3">Фильтры</p>
+          <ul class="glogos"><li><img src="assets/brands/mann-filter.svg" alt="MANN-FILTER" loading="lazy" decoding="async"></li><li><img src="assets/brands/filtron.svg" alt="FILTRON" loading="lazy" decoding="async"></li><li><img src="assets/brands/fram.webp" alt="FRAM" loading="lazy" decoding="async"></li></ul>
+          <ul class="chips">
+            <li data-i18n="br.c10">Масляные фильтры</li>
+            <li data-i18n="br.c11">Воздушные фильтры</li>
+            <li data-i18n="br.c12">Салонные фильтры</li>
+            <li data-i18n="br.c13">Топливные фильтры</li>
+          </ul>
         </div>
       </div>
-      <ul class="chips">
-        <li data-i18n="br.c1">Присадки для ДВС</li>
-        <li data-i18n="br.c2">Присадки для АКПП</li>
-        <li data-i18n="br.c3">Присадки для ГУР</li>
-        <li data-i18n="br.c4">Присадки для системы охлаждения</li>
-        <li data-i18n="br.c5">Антифризы</li>
-        <li data-i18n="br.c6">Тормозные жидкости</li>
-        <li data-i18n="br.c7">Автолампы галогенные</li>
-        <li data-i18n="br.c8">Автолампы светодиодные</li>
-        <li data-i18n="br.c9">Автолампы ксеноновые</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -462,9 +478,9 @@
       <li data-i18n="mg.a1">Моторные и трансмиссионные масла</li>
       <li data-i18n="mg.a2">Антифризы и тормозные жидкости</li>
       <li data-i18n="mg.a3">Присадки для ДВС, АКПП, ГУР и системы охлаждения</li>
-      <li data-i18n="mg.a4">Автохимия LAVR, GRASS</li>
-      <li data-i18n="mg.a5">Автолампы галогенные, светодиодные, ксеноновые</li>
-      <li data-i18n="mg.a6">Фильтры, свечи, щётки стеклоочистителя</li>
+      <li data-i18n="mg.a4">Автохимия LAVR, GRASS, MITSUJI</li>
+      <li data-i18n="mg.a5">Автолампы OSRAM, DOMAX, GM: галогенные, светодиодные, ксеноновые</li>
+      <li data-i18n="mg.a6">Фильтры MANN-FILTER, FILTRON, FRAM; свечи, щётки стеклоочистителя</li>
       <li data-i18n="mg.a7">Аптечки, огнетушители, инструмент</li>
     </ul>
   </div>
@@ -656,6 +672,6 @@
   <a class="bar-ig" href="https://www.instagram.com/auto_plus_atyrau/" target="_blank" rel="noopener" aria-label="AUTO+ в Instagram"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261102-4"></script>
+<script src="script.js?v=20261102-5"></script>
 </body>
 </html>

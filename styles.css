@@ -277,6 +277,17 @@ h1 { font-size: clamp(38px, 5.2vw, 76px); font-weight: 800; color: #fff; letter-
 .chem-head h3 { font-size: clamp(20px, 2vw, 26px); }
 .chem-logos { display: flex; gap: 12px; }
 .chem-logos img { height: 44px; width: auto; max-width: 150px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; }
+.chem > h3 { font-size: clamp(20px, 2vw, 26px); }
+.groups { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; margin-top: 28px; }
+.grp { min-width: 0; }
+.grp-h { font-family: var(--fm); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.glogos { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 16px; }
+.glogos li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; min-height: 72px; display: flex; align-items: center; justify-content: center; padding: 12px 10px; }
+.glogos img { max-height: 30px; max-width: 100%; width: auto; object-fit: contain; }
+.glogos img[src*="mann"] { max-height: 38px; }
+.wordmark { font-family: var(--fd); font-weight: 800; font-size: 20px; letter-spacing: .04em; color: var(--text); white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1100px) { .glogos li { padding: 10px 6px; } .wordmark { font-size: 15px; letter-spacing: .02em; } }
+.grp .chips { margin-top: 14px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .chips li { font-size: 14px; font-weight: 500; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
 .chips-lg { margin-top: 36px; }
@@ -439,6 +450,7 @@ body.menu-open .bar { transform: translateY(110%); }
   .dealer { grid-template-columns: 1fr; margin-top: 32px; gap: 12px; }
   .c-dealer { padding: 22px; }
   .logos { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 28px; }
+  .groups { grid-template-columns: minmax(0,1fr); gap: 28px; }
   .logos li { min-height: 92px; padding: 14px 8px; gap: 8px; }
   .logos img { max-height: 30px; }
   .logos img[src*="shell"], .logos img[src*="bardahl"], .logos img[src*="fuchs"] { max-height: 44px; }
