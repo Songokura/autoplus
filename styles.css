@@ -240,6 +240,17 @@ h1 { font-size: clamp(38px, 5.2vw, 76px); font-weight: 800; color: #fff; letter-
 }
 .c h3 { font-size: 20px; }
 .c p { margin-top: 10px; font-size: 15px; color: var(--mute); line-height: 1.45; }
+.gal { position: relative; width: calc(100% + 44px); margin: -22px -22px 18px; border-radius: var(--r) var(--r) 0 0; overflow: hidden; }
+.gal-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; aspect-ratio: 4/5; overscroll-behavior-x: contain; }
+.gal-track::-webkit-scrollbar { display: none; }
+.gal-track:focus-visible { outline: 2px solid var(--green); outline-offset: -2px; }
+.gal-track li { flex: 0 0 100%; scroll-snap-align: start; }
+.gal-track img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gal-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.94); color: #0F1214; display: grid; place-items: center; cursor: pointer; box-shadow: 0 6px 18px -6px rgba(0,0,0,.45); transition: opacity .2s ease; }
+.gal-btn[data-dir="-1"] { left: 12px; }
+.gal-btn[data-dir="1"] { right: 12px; }
+.gal-btn:disabled { opacity: 0; pointer-events: none; }
+.gal-btn[hidden] { display: none; }
 .c .c-img { width: calc(100% + 44px); margin: -22px -22px 18px; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--r) var(--r) 0 0; }
 .c-cta {
   display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 18px; font-weight: 600; font-size: 14px; color: var(--cta);
@@ -448,7 +459,7 @@ body.menu-open .bar { transform: translateY(110%); }
   .grid { gap: 12px; margin-top: 32px; }
   .cards, .cards-3, .addr { grid-template-columns: 1fr; }
   .c { padding: 18px; }
-  .c .c-img { width: calc(100% + 36px); margin: -18px -18px 16px; }
+  .c .c-img, .gal { width: calc(100% + 36px); margin: -18px -18px 16px; }
   .c h3 { font-size: 19px; }
   .dealer { grid-template-columns: 1fr; margin-top: 32px; gap: 12px; }
   .c-dealer { padding: 22px; }

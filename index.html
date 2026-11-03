@@ -31,7 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero.webp" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m.webp" media="(max-width: 760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261102-6">
+<link rel="stylesheet" href="styles.css?v=20261103-1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,7 +77,7 @@
       <a href="#brendy" data-i18n="nav.brendy">Бренды</a>
       <a href="#uslugi" data-i18n="nav.uslugi">Работы</a>
       <a href="#podbor" data-i18n="nav.podbor">Подбор масла</a>
-      <a href="#magaziny" data-i18n="nav.magaziny">Магазины</a>
+      <a href="#magaziny" data-i18n="nav.magaziny">Автоаптеки</a>
       <a href="#adresa" data-i18n="nav.adresa">Контакты</a>
     </nav>
     <div class="hdr-right">
@@ -97,7 +97,7 @@
       <a href="#brendy" data-i18n="nav.brendy">Бренды</a>
       <a href="#uslugi" data-i18n="nav.uslugi">Работы</a>
       <a href="#podbor" data-i18n="nav.podbor">Подбор масла</a>
-      <a href="#magaziny" data-i18n="nav.magaziny">Магазины</a>
+      <a href="#magaziny" data-i18n="nav.magaziny">Автоаптеки</a>
       <a href="#akcii" data-i18n="nav.akcii">Частным клиентам</a>
       <a href="#adresa" data-i18n="nav.adresa">Контакты</a>
     </nav>
@@ -462,26 +462,38 @@
 <section class="sec sec-paper" id="magaziny" aria-labelledby="h-mag">
   <div class="wrap">
     <p class="kick" data-i18n="mg.kick">Магазины</p>
-    <h2 id="h-mag" data-i18n="mg.h2">Магазины автотоваров AUTO+</h2>
-    <p class="lead" data-i18n="mg.lead">Три магазина в Атырау, ежедневно с 09:00 до 00:00. Масла, технические жидкости, автохимия, автолампы и расходные материалы в наличии.</p>
+    <h2 id="h-mag" data-i18n="mg.h2">Автоаптеки AUTO+</h2>
+    <p class="lead" data-i18n="mg.lead">Три автоаптеки в Атырау, ежедневно с 09:00 до 00:00. Масла, технические жидкости, автохимия, автолампы и расходные материалы в наличии.</p>
     <div class="grid cards cards-3">
       <article class="c rv">
-        <img class="c-img" src="assets/img/mag-geolog.webp" width="800" height="600" alt="Магазин автотоваров AUTO+ Геолог вечером" loading="lazy" decoding="async">
-        <span class="tag" data-i18n="mg.tag">Магазин</span>
+        <div class="gal" data-gal>
+          <ul class="gal-track" tabindex="0" aria-label="Фото автоаптеки Геолог"><li><img src="assets/img/mag-geolog-1.webp" width="800" height="1000" alt="Автоаптека AUTO+ Геолог снаружи, трасса Атырау-Доссор" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-geolog-2.webp" width="800" height="1000" alt="Торговый зал автоаптеки Геолог" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-geolog-3.webp" width="800" height="1000" alt="Витрины с автолампами и аксессуарами в автоаптеке Геолог" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-geolog-4.webp" width="800" height="1000" alt="Стеллаж моторных масел Liqui Moly в автоаптеке Геолог" loading="lazy" decoding="async"></li></ul>
+          <button type="button" class="gal-btn" data-dir="-1" aria-label="Предыдущее фото"><svg width="18" height="18" style="transform:scaleX(-1)"><use href="#ic-arr"/></svg></button>
+          <button type="button" class="gal-btn" data-dir="1" aria-label="Следующее фото"><svg width="18" height="18"><use href="#ic-arr"/></svg></button>
+        </div>
+        <span class="tag" data-i18n="mg.tag">Автоаптека</span>
         <h3 data-i18n="mg1.h">Геолог</h3>
         <p data-i18n="mg1.p">трасса Атырау-Доссор,&nbsp;41б · 09:00-00:00</p>
         <a class="c-cta" href="tel:+77752164154"><svg width="16" height="16"><use href="#ic-tel"/></svg><span>+7&nbsp;775&nbsp;216&nbsp;41&nbsp;54</span></a>
       </article>
       <article class="c rv">
-        <img class="c-img" src="assets/img/mag-miras.webp" width="800" height="600" alt="Торговый зал магазина AUTO+ Мирас" loading="lazy" decoding="async">
-        <span class="tag" data-i18n="mg.tag">Магазин</span>
+        <div class="gal" data-gal>
+          <ul class="gal-track" tabindex="0" aria-label="Фото автоаптеки Мирас"><li><img src="assets/img/mag-miras-1.webp" width="800" height="1000" alt="Вход в автоаптеку AUTO+ Мирас вечером" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-miras-2.webp" width="800" height="1000" alt="Торговый зал автоаптеки Мирас" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-miras-3.webp" width="800" height="1000" alt="Стеллажи автоаптеки Мирас" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-miras-4.webp" width="800" height="1000" alt="Ассортимент автоаптеки Мирас" loading="lazy" decoding="async"></li></ul>
+          <button type="button" class="gal-btn" data-dir="-1" aria-label="Предыдущее фото"><svg width="18" height="18" style="transform:scaleX(-1)"><use href="#ic-arr"/></svg></button>
+          <button type="button" class="gal-btn" data-dir="1" aria-label="Следующее фото"><svg width="18" height="18"><use href="#ic-arr"/></svg></button>
+        </div>
+        <span class="tag" data-i18n="mg.tag">Автоаптека</span>
         <h3 data-i18n="mg2.h">Мирас</h3>
         <p data-i18n="mg2.p">ул.&nbsp;Астана,&nbsp;30а · 09:00-00:00</p>
         <a class="c-cta" href="tel:+77055007558"><svg width="16" height="16"><use href="#ic-tel"/></svg><span>+7&nbsp;705&nbsp;500&nbsp;75&nbsp;58</span></a>
       </article>
       <article class="c rv">
-        <img class="c-img" src="assets/img/mag-bereke.webp" width="800" height="600" alt="Торговый зал магазина AUTO+ со стеллажами масел" loading="lazy" decoding="async">
-        <span class="tag" data-i18n="mg.tag">Магазин</span>
+        <div class="gal" data-gal>
+          <ul class="gal-track" tabindex="0" aria-label="Фото автоаптеки Құрсай"><li><img src="assets/img/mag-kursay-1.webp" width="800" height="1000" alt="Автоаптека AUTO+ Құрсай снаружи, вывеска «Масла, аксессуары»" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-kursay-2.webp" width="800" height="1000" alt="Торговый зал автоаптеки Құрсай" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-kursay-3.webp" width="800" height="1000" alt="Стеллаж моторных масел в автоаптеке Құрсай" loading="lazy" decoding="async"></li><li><img src="assets/img/mag-kursay-4.webp" width="800" height="1000" alt="Витрины с подсветкой в автоаптеке Құрсай" loading="lazy" decoding="async"></li></ul>
+          <button type="button" class="gal-btn" data-dir="-1" aria-label="Предыдущее фото"><svg width="18" height="18" style="transform:scaleX(-1)"><use href="#ic-arr"/></svg></button>
+          <button type="button" class="gal-btn" data-dir="1" aria-label="Следующее фото"><svg width="18" height="18"><use href="#ic-arr"/></svg></button>
+        </div>
+        <span class="tag" data-i18n="mg.tag">Автоаптека</span>
         <h3 data-i18n="mg3.h">Құрсай</h3>
         <p data-i18n="mg3.p">ул. О.&nbsp;Смагулова,&nbsp;2 · 09:00-00:00</p>
         <a class="c-cta" href="tel:+77785862484"><svg width="16" height="16"><use href="#ic-tel"/></svg><span>+7&nbsp;778&nbsp;586&nbsp;24&nbsp;84</span></a>
@@ -687,6 +699,6 @@
   <a class="bar-ig" href="https://www.instagram.com/auto_plus_atyrau/" target="_blank" rel="noopener" aria-label="AUTO+ в Instagram"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261102-6"></script>
+<script src="script.js?v=20261103-1"></script>
 </body>
 </html>

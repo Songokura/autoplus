@@ -317,6 +317,29 @@
   }
 
   /* ---------- лента команды: стрелки, шаг в одну карточку ---------- */
+
+  /* галереи магазинов */
+  document.querySelectorAll('[data-gal]').forEach(function (g) {
+    var t = g.querySelector('.gal-track'), bs = g.querySelectorAll('.gal-btn');
+    function upd() {
+      var max = t.scrollWidth - t.clientWidth;
+      bs.forEach(function (b) {
+        b.hidden = max <= 1;
+        b.disabled = parseInt(b.getAttribute('data-dir'), 10) < 0 ? t.scrollLeft <= 1 : t.scrollLeft >= max - 1;
+      });
+    }
+    bs.forEach(function (b) {
+      b.addEventListener('click', function () {
+        t.scrollBy({ left: parseInt(b.getAttribute('data-dir'), 10) * t.clientWidth, behavior: RED ? 'auto' : 'smooth' });
+      });
+    });
+    var tick = false;
+    t.addEventListener('scroll', function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () { tick = false; upd(); });
+    }, { passive: true });
+    upd(); window.addEventListener('resize', upd);
+  });
   var lane = document.querySelector('.lane');
   var laneBtns = document.querySelectorAll('.lane-btn');
   function laneStep() {
