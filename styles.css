@@ -311,6 +311,9 @@ h1 { font-size: clamp(38px, 5.2vw, 76px); font-weight: 800; color: #fff; letter-
 .podbor { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 32px; margin-top: 48px; align-items: start; }
 .podbor-img { margin: 0; border-radius: var(--r); overflow: hidden; }
 .podbor-img img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.podbor-img .gal { width: 100%; margin: 0; border-radius: 0; }
+.podbor-img .gal-track { aspect-ratio: 4/3; }
+.podbor-img .gal-track img { height: 100%; }
 .podbor-cards { display: flex; flex-direction: column; gap: 12px; }
 .c-link-card { flex-direction: row; align-items: center; gap: 22px; padding: 18px 22px; background: var(--g2); border-color: var(--line-d); color: #fff; }
 .c-link-card > img { width: 96px; height: auto; max-height: 52px; object-fit: contain; flex: 0 0 auto; }
