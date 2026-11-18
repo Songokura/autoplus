@@ -9,6 +9,20 @@
   var HAS_IO = 'IntersectionObserver' in window;
   var WA = 'https://wa.me/77011189228?text=';
 
+  /* ---------- конверсии Google Ads: звонок, WhatsApp, форма ---------- */
+  function conv(key) {
+    var id = (window.AP_CONV || {})[key];
+    if (!id || typeof window.gtag !== 'function') return;
+    window.gtag('event', 'conversion', { send_to: id, value: 1.0, currency: 'USD', transport_type: 'beacon' });
+  }
+  window.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0) conv('phone');
+    else if (h.indexOf('wa.me') > -1) conv('contact');
+  }, true);
+
   function clamp(v) { return v < 0 ? 0 : (v > 1 ? 1 : v); }
   function easeInOut(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
 
@@ -412,6 +426,7 @@
       if (org && f.company.value.trim()) lines.push(t('form.company') + f.company.value.trim());
       if (org && f.cars.value.trim()) lines.push(t('form.cars') + f.cars.value.trim());
       if (f.comment.value.trim()) lines.push(t('form.comment') + f.comment.value.trim());
+      conv('lead');
       window.open(WA + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
       var ok = form.querySelector('.form-ok');
       if (ok) ok.hidden = false;
